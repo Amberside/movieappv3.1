@@ -4,8 +4,66 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Movie App</title>
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-  
+  <!-- Main content for page -->
+  <main class="container">
+    <!-- Page Header -->
+    <h1> My Movie App</h1>
+    <!-- Section for searching and sorting  -->
+    <section class="search-sort">
+      <h2>Movie Search / Sort</h2>
+    </section>
+    <!-- End search and sort section -->
+
+    <!-- Start Movie list section -->
+    <section id="mList">
+      <h2 class="ml-3">Movie List</h2>
+    </section>
+    <!-- Send Move list section -->
+
+    <!-- Section to display messages -->
+    <section id="msg" class="msgBox"></section>
+
+    <!-- Start Tab Section -->
+    <!-- Tabs -->
+    <section class="tabs">
+
+    </section>
+    <!-- End Tab Section -->
+
+    <!-- Tab content -->
+    <!-- Add Movie section -->
+    <section id="Add" class="tabcontent">
+      <h2>Add a Movie</h2>
+    </section>
+    <!-- End Add Movie section -->
+    <!-- Update Movie section -->
+    <section id="Update" class="tabcontent">
+      <h2>Update a Movie</h2>
+    </section>
+    <!-- End Update Movie section -->
+    <!-- Delete Movie section -->
+    <section id="Delete" class="tabcontent">
+      <h2>Delete a Movie</h2>
+    </section>
+    <!-- End Delete movie section -->
+
+    <!-- Footer -->
+    <footer>
+      <div>
+        <p>Copyright &copy; <span id="date"></span> My Movie App</p>
+      </div>
+    </footer>
+    <!-- End of footer -->
+   </main>
+   <!-- End of main content -->
+
+  <!-- Load in our JavaScript -->
+  <!-- NOTE: The order we import the javascript here is important -->
+  <!-- Have the movie-list.js first, allows app.js to access the class defined in this file -->
+  <script src="./js/movie-list.js"></script>
+  <script src="./js/app.js"></script>
 </body>
 </html>
