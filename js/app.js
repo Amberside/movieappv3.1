@@ -2,7 +2,7 @@
  * @file app.js
  * @description This file contains the JavaScript for our movie app.
  * It contains the movieList instance, the event functions and UI code.
- * 
+ * cspell: ignore Amberle Seidl tabcontent tablinks Shawshank Krull Starfighter
  * @author Amberle Seidl
  * @version 3.1.0
  * @since v3
@@ -12,6 +12,30 @@
  * Bound checking for getData() and deleteClick()
  */
 
+/**
+ * @global
+ * @description The initial list of movies for our app.
+ */
+
+let initialMovies = [
+  {title: "The Shawshank Redemption", year: 1994 },
+  {title: "The Godfather", year: 1972 },
+  {title: "The GodFather: Part II", year: 1974 },
+  {title: "The Dark Night", year: 2008 },
+  {title: "Krull", year: 1983 },
+  {title: "The Last Starfighter", year: 1981 }
+];
+
+/**
+ * @memberof MovieList
+ * @instance movieList
+ * @param {string} - The id of the element we want to have our movieList appear in
+ * @param {Array} initialMovies - The array of movies in our movieList
+ * @global
+ * @description The movieList instance to keep track of our list of movies in the app
+ */
+
+let movieList = new MovieList('list', initialMovies);
 
 // UI Javascript
 /**

@@ -53,8 +53,9 @@ class MovieList{
    */ 
   genMovieList(){
     // Loop through the movieList
-    for(let i = 0; this.movieList.length; i++){
+    for(let i = 0; i < this.movieList.length; i++){
       let movie = this.movieList[i];
+      console.log(movie);
       // call the movieRow method.
       this.movieRow(movie.title, movie.year);
     }
@@ -96,7 +97,7 @@ class MovieList{
     this.removeElements();
     this.genMovieList();
   }
-  
+
    /**
    * @function add
    */
