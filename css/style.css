@@ -24,6 +24,7 @@ h1 {
 
 h2 {
   margin-bottom: 0.5rem;
+  color: #304F4F;
 }
 
 /* utility styles */
@@ -118,4 +119,5 @@ footer {
 
 footer p{
   padding-right: 0.5rem;
+  font-weight: bold;
 }
