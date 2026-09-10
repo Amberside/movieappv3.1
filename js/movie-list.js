@@ -86,6 +86,7 @@ class MovieList{
    /**
    * @function getRow
    */
+
    /**
     * Call the removeElements() method and 
     * Call genMovieList() to add in the new list
@@ -95,6 +96,7 @@ class MovieList{
     this.removeElements();
     this.genMovieList();
   }
+  
    /**
    * @function add
    */
