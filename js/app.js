@@ -85,6 +85,50 @@ function z2aClick(){
   movieList.sortZ2A();
 }
 
+/**
+ * @event Click#addSubmit
+ * @function addClick
+ * @description add a new movie to the list
+ */
+function addClick(){
+  // Get form from the DOM
+  let formElements = document.getElementById("form-add").elements;
+  // get the title and the year
+  let title = formElements["title"].value;
+  let year = Number(formElements["year"].value);
+
+  // Save to the movieList
+  movieList.add(title, Number(year));
+}
+
+/**
+ * @event Click#updateSubmit
+ * @function updateClick
+ * @description Update a movie in the list
+ */
+function updateClick(){
+  // Getting the form elements
+  let formElements = document.getElementById("form-update").elements;
+  // Get the values
+  let index = Number(formElements["index"].value -1 );
+  let title = formElements["title"].value;
+  let year = Number(formElements["year"].value);
+
+  movieList.update(Number(index), title, Number(year));
+}
+
+/**
+ * @event Click#deleteClick
+ * @function deleteClick
+ * @description Delete a movie from the movieList
+ */
+function deleteClick(){
+  // get the element from the dom
+  let indexElement = document.getElementById("delIndex");
+  let index = Number(indexElement.value);
+
+  movieList.delete(Number(index));
+}
 // UI Javascript
 /**
  * JavaScript function for opening the forms
