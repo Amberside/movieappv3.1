@@ -37,6 +37,54 @@ let initialMovies = [
 
 let movieList = new MovieList('list', initialMovies);
 
+// Getting all the buttons from our application
+const searchBtn = document.getElementById('searchBtn');
+const sortA2ZBtn = document.getElementById('sortA2ZBtn');
+const sortZ2ABtn = document.getElementById('sortZ2ABtn');
+const addSubmit = document.getElementById('addSubmit');
+const updateSubmit = document.getElementById('updateSubmit');
+const deleteSubmit = document.getElementById('deleteSubmit');
+
+// Add event handlers
+searchBtn.addEventListener('click', searchClick);
+sortA2ZBtn.addEventListener('click', a2zClick);
+sortZ2ABtn.addEventListener('click', z2aClick);
+addSubmit.addEventListener('click', addClick);
+updateSubmit.addEventListener('click', updateClick);
+deleteSubmit.addEventListener('click', deleteClick);
+
+/** 
+ * Search for a movie by partial title
+ * @event Click#searchBtn
+ * @function searchClick
+ */
+function searchClick(){
+  // get the text from the DOM
+  let formElements = document.getElementById("form-list-control").elements;
+  // get the text from the input field
+  let text = formElements["search-string"].value;
+  // run the search method
+  movieList.search(text);
+}
+
+/**
+ * Sort the movieList in ascending order
+ * @event Click#a2zButton
+ * @function a2zClick
+ */
+function a2zClick(){
+  movieList.sortA2Z();
+}
+
+/**
+ * Sort the movieList in descending order
+ * @event Click#z2aButton
+ * @function z2aClick
+ */
+function z2aClick(){
+  movieList.sortZ2A();
+}
+
 // UI Javascript
 /**
  * JavaScript function for opening the forms
