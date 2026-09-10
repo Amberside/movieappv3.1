@@ -130,6 +130,7 @@ ol {
 }
 /* Tabcontent styles */
 .tabcontent {
+  display: none;
   padding: 1rem 1.5rem;
   border: 2px solid #333333;
   border-top: none;
