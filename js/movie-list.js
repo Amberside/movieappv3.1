@@ -99,9 +99,17 @@ class MovieList{
   }
 
    /**
+    * A function that will return a row / movie from the movie list
    * @function getRow
+   * @param {number} id - The index of the movie we wish to find.
+   * @returns {object} - a movie object from the movieList based on the index.
    */
-
+  getRow(id){
+    console.log("getRow id: ", id);
+    const row = this.movieList.find((movie, index) => index === id);
+    console.log(row);
+    return row;
+  }
    /**
     * Call the removeElements() method and 
     * Call genMovieList() to add in the new list
