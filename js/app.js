@@ -126,7 +126,7 @@ function deleteClick(){
   // get the element from the dom
   let indexElement = document.getElementById("delIndex");
   let index = Number(indexElement.value);
-  // index = index - 1;
+  index = index - 1;
   movieList.delete(Number(index));
 }
 // UI Javascript

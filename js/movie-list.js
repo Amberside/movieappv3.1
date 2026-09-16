@@ -185,8 +185,7 @@ class MovieList{
     // Create a new list to hold search results
     let shortList = [];
     // Loop through the titles to see if the nameString is in a movieTitle
-    // let movie
-    for (movie of this.movieList){
+    for (let movie of this.movieList){
       // Check to see if nameString is in movie.title
       if(movie.title.includes(nameString)){
         // add this movie to our shortList
