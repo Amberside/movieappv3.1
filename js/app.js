@@ -114,9 +114,11 @@ function addClick(){
     formElements.title.value = "";
     formElements.title.year = "";
   } else if(!test){
-    alert("Invalid title, must be alphanumeric with spaces only");
+    // alert("Invalid title, must be alphanumeric with spaces only");
+    showMessage("Invalid title, must be alphanumeric with spaces only", "red", "white");
   } else {
-    alert("Invalid year, must be an integer");
+    // alert("Invalid year, must be an integer");
+    showMessage("Invalid year, must be an integer", "red", "white");
   }
 
 
