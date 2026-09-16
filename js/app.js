@@ -162,8 +162,14 @@ function updateClick(){
   let index = Number(formElements["index"].value -1 );
   let title = formElements["title"].value;
   let year = Number(formElements["year"].value);
+  // Add in Validation 
+  // Use the same validation for addClick.
 
   movieList.update(Number(index), title, Number(year));
+  // Clear the input boxes
+  formElements.index.value = "";
+  formElements.title.value = "";
+  formElements.year.value = "";
 }
 
 /**
