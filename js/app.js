@@ -120,9 +120,35 @@ function addClick(){
     // alert("Invalid year, must be an integer");
     showMessage("Invalid year, must be an integer", "red", "white");
   }
-
-
 }
+
+/**
+ * Get movie data from the movie list to update when typing an index in the index input in the update form
+ * @function getData
+ */
+function getData(){
+  console.log("getData");
+  // Get form elements
+  const idValue = document.getElementById('upIndex').value;
+  const upIndex = Number(idValue);
+  console.log(upIndex);
+  const upperBound = movieList.movieList.length;
+  console.log(upperBound);
+  if(upIndex > 0  && upIndex <= upperBound ){
+    const title = document.getElementById('upTitle');
+    const year = document.getElementById('upYear');
+    // search the movieList for the row
+    const row = movieList.getRow(upIndex -1 );
+    console.log(row);
+    title.value = row.title;
+    year.value = row.year;
+  } else {
+    showMessage("No such index exists", "DarkOrange", "white");
+  }
+}
+
+const upIndex = document.getElementById('upIndex');
+upIndex.addEventListener('change', getData);
 
 /**
  * @event Click#updateSubmit
