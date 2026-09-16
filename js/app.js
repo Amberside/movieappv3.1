@@ -96,9 +96,30 @@ function addClick(){
   // get the title and the year
   let title = formElements["title"].value;
   let year = Number(formElements["year"].value);
+  // Add in validation.
+  // We can test our year and title
+  // We can also add in rules to test the input
+  console.log(title);
+  console.log(year);
+  const pattern = /^[a-z0-9\s]*$/i
+  const test = pattern.test(title);
+  const yearIsInt = Number.isInteger(year);
+  // output of our tests
+  console.log(test);
+  console.log(yearIsInt);
+  if (test && yearIsInt){
+    // Save to the movieList
+    movieList.add(title, Number(year));
+    // Clear the input fields
+    formElements.title.value = "";
+    formElements.title.year = "";
+  } else if(!test){
+    alert("Invalid title, must be alphanumeric with spaces only");
+  } else {
+    alert("Invalid year, must be an integer");
+  }
 
-  // Save to the movieList
-  movieList.add(title, Number(year));
+
 }
 
 /**
