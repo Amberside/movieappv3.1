@@ -1,7 +1,8 @@
+// cSpell: ignore Amberle Seidl
+
 /**
  * @file movie-list.js
  * @description This file holds the class definition of our MovieList class
- * cSpell: ignore Amberle Seidl
  * @author Amberle Seidl
  * @version 2.0.0
  * @since v2
@@ -24,8 +25,8 @@ class MovieList{
     this.movieList = movies  // The array of movies to be displayed
     this.refresh();
   }
-  // Methods
 
+  // Methods
   /**
    * Generate one row of the movieList for display
    * It will create the necessary HTML elements fro displaying a single movie to the UI

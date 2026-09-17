@@ -1,8 +1,8 @@
+// cspell: ignore Amberle Seidl tabcontent tablinks Shawshank Krull Starfighter colour
 /**
  * @file app.js
  * @description This file contains the JavaScript for our movie app.
  * It contains the movieList instance, the event functions and UI code.
- * cspell: ignore Amberle Seidl tabcontent tablinks Shawshank Krull Starfighter colour
  * @author Amberle Seidl
  * @version 3.1.0
  * @since v3
@@ -15,6 +15,7 @@
 /**
  * @global
  * @description The initial list of movies for our app.
+ * @type {Array} initialMovies
  */
 
 let initialMovies = [
