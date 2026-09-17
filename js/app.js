@@ -183,6 +183,7 @@ function deleteClick(){
   let index = Number(indexElement.value);
   index = index - 1;
   console.log(index);
+  // instance.property.length
   const upperBound = movieList.movieList.length;
   console.log(upperBound);
   if ( index > 0 && index <= upperBound){
