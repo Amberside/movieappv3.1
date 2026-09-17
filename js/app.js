@@ -182,7 +182,26 @@ function deleteClick(){
   let indexElement = document.getElementById("delIndex");
   let index = Number(indexElement.value);
   index = index - 1;
-  movieList.delete(Number(index));
+  console.log(index);
+  const upperBound = movieList.movieList.length;
+  console.log(upperBound);
+  if ( index > 0 && index <= upperBound){
+    // get the current movie
+    const movie = movieList.getRow(index);
+    // confirm the delete
+    const confirm = window.confirm(`Do you want to delete movie "${movie.title}"?`);
+    if(confirm){
+      console.log("Deleting movie....", movie.title);
+      // Delete movie from movieList
+      movieList.delete(Number(index));
+      showMessage("Movie Deleted", "chartreuse", "black");
+    } else {
+      console.log("Delete cancelled");
+      showMessage("Delete cancelled", "DarkOrange", "white");
+    }
+  } else {
+    showMessage("No such index exists", "DarkOrange", "white");
+  }
 }
 // UI Javascript
 /**
