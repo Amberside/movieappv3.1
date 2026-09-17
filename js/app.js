@@ -164,12 +164,24 @@ function updateClick(){
   let year = Number(formElements["year"].value);
   // Add in Validation 
   // Use the same validation for addClick.
-
-  movieList.update(Number(index), title, Number(year));
-  // Clear the input boxes
-  formElements.index.value = "";
-  formElements.title.value = "";
-  formElements.year.value = "";
+  const pattern = /^[a-z0-9\s]*$/i
+  const test = pattern.test(title);
+  const yearIsInt = Number.isInteger(year);
+  // output of our tests
+  console.log(test);
+  console.log(yearIsInt);
+  if (test && yearIsInt){
+    // Update the movieList
+    movieList.update(Number(index), title, Number(year));
+    // Clear the input fields
+    formElements.index.value = "";
+    formElements.title.value = "";
+    formElements.year.value = "";
+  } else if(!test){
+    showMessage("Invalid title, must be alphanumeric with spaces only", "red", "white");
+  } else {
+    showMessage("Invalid year, must be an integer", "red", "white");
+  }  
 }
 
 /**
